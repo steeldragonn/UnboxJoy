@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const Gift = require("./Gift.model");
 
 const userSchema = new Schema(
   {
@@ -17,6 +18,7 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
+    favorites: [{ type: Schema.Types.ObjectId, ref: "Gift" }],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
