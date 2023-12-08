@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 
 const { isAuthenticated } = require("../middleware/jwt.middleware.js");
 
@@ -22,11 +23,34 @@ router.get("/", async (req, res) => {
 //
 
 //gift details
-
-//gifts search
+router.get("/:giftId", (req, res, next) => {
+  const { giftId } = req.params;
+  console.log(giftId);
+  Gift.findById(giftId)
+    .then((gift) => res.status(200).json(gift))
+    .catch((error) => res.json(error));
+});
 
 //gift favorite
 
 //gift cart
+
+//route search by categoryYYYYYYYYYYYYYYYYYYY
+router.get("/category/:giftCategory", (req, res) => {
+  const { giftCategory } = req.params;
+  console.log(giftCategory);
+  Gift.find({ category: giftCategory })
+    .then((gifts) => res.status(200).json(gifts))
+    .catch((error) => res.json(error));
+});
+
+/// route search by numberOfPeople
+router.get("/numberOfPeople/:numberOfPeople", (req, res) => {
+  const { numberOfPeople } = req.params;
+  console.log(numberOfPeople);
+  Gift.find({ numberOfPeople })
+    .then((gifts) => res.status(200).json(gifts))
+    .catch((error) => res.json(error));
+});
 
 module.exports = router;

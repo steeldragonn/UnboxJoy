@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Artistic Masterpiece",
+    "price": 150,
+    "description": "A heheheeh piece of art to adorn your space.",
+    "imageURL": "https://prom-date.com/cdn/shop/articles/King_Kevin1500.jpg?v=1665548251",
+    "location": {
+      "city": "Cityville",
+      "country": "Artland"
+    },
+    "category": "art",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Adventure Getaway",
+    "price": 300,
+    "description": "An adrenaline-packed trip for thrill-seekers.",
+    "imageURL": "https://vanessa-stockard.myshopify.com/cdn/shop/files/IMG_1793.jpg?v=1691893313&width=3840",
+    "location": {
+      "city": "Thrillburg",
+      "country": "Adventureland"
+    },
+    "category": "adrenaline",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Soothing Spa Retreat",
+    "price": 200,
+    "description": "A wellness retreat to relax and rejuvenate.",
+    "imageURL": "https://s3-eu-central-1.amazonaws.com/sverediuk.com.ua/wp-content/uploads/2015/10/Melnitsa-na-beregu-reki.-Ukraina.-1880.jpg",
+    "location": {
+      "city": "Relaxington",
+      "country": "Wellnessland"
+    },
+    "category": "wellness",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "chilling on the coach",
+    "price": 10,
+    "description": "just sid down and think what did you acheived in this life",
+    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
+    "location": {
+      "city": "Relaxington",
+      "country": "Any"
+    },
+    "category": "wellness",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "go for a walk, lazy bastard",
+    "price": 0,
+    "description": "video games will not save your fat ass from loneliness",
+    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
+    "location": {
+      "city": "Relaxington",
+      "country": "Any"
+    },
+    "category": "art",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "checking gravity",
+    "price": 10000,
+    "description": "maybe you will transorm into a dragon, maybe you will just crash. who knows?",
+    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
+    "location": {
+      "city": "Somewhere in the sky",
+      "country": "Broland"
+    },
+    "category": "adrenaline",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "petting cats",
+    "price": 10000,
+    "description": "cats and money are girls best friends",
+    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
+    "location": {
+      "city": "in your heart",
+      "country": "Family"
+    },
+    "category": "wellness",
+    "numberOfPeople": 1
+  }
+]
