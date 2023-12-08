@@ -15,6 +15,9 @@ app.use("/auth", authRoutes);
 const giftRoutes = require("./routes/gift.routes");
 app.use("/gifts", giftRoutes);
 
+const giftBookingRoutes = require("./routes/gift-booking.routes");
+app.use("/", giftBookingRoutes);
+
 require("./error-handling")(app);
 
 module.exports = app;
