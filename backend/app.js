@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 require("./config")(app);
 
-//const giftsData = require("./gifts.json");
+// const giftsData = require("./gifts.json");
 
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
