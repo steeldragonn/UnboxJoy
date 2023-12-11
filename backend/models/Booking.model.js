@@ -2,6 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const bookingSchema = new Schema(
   {
+    user: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
     name: { type: String, required: true },
     numOfPeople: { type: Number, required: true },
     price: { type: Number },
