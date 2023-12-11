@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 // import Gift from "backend/models/Gift.model";
+import Navbar from "../components/Navbar";
 
 const API_URL = "http://localhost:5005";
 
@@ -21,6 +22,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <Navbar />
       <h1>UnboxJoy</h1>
       <div>
         <h2>Choose joy for loved ones</h2>
