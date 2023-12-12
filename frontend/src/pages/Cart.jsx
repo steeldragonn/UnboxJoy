@@ -5,14 +5,17 @@ import axios from "axios";
 import CartItem from "../components/CartItem";
 
 const API_URL = "http://localhost:5005";
-
+const token = localStorage.getItem("authToken");
+console.log(token);
 function AddToCart() {
   const [gifts, setGifts] = useState([]);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/cart`)
+      .get(`${API_URL}/cart`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then((response) => {
         console.log(response);
         setGifts(response.data);
@@ -37,6 +40,7 @@ function AddToCart() {
     <div>
       <h2>Gift Cart Page</h2>
       {setGifts &&
+        gifts &&
         gifts.map((gift, index) => {
           return (
             <CartItem key={index} gift={gift} clickToDelete={deleteGift} />
