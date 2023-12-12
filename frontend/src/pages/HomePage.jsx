@@ -20,8 +20,7 @@ const HomePage = () => {
     if (selectedNumberOfPeople) {
       params.numberOfPeople = selectedNumberOfPeople;
     }
-    // console.log(params);
-    console.log(selectedCategory);
+    console.log(params);
 
     axios
       .get(`${API_URL}/gifts`, { params })
@@ -56,7 +55,7 @@ const HomePage = () => {
           <input
             type="number"
             value={selectedNumberOfPeople}
-            onChange={(e) => setSelectedNumberOfPeople(e.target.value)}
+            onChange={(e) => setSelectedNumberOfPeople(Number(e.target.value))}
           />
         </label>
 
