@@ -2,9 +2,12 @@ require("dotenv").config();
 require("./db");
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
 require("./config")(app);
 
-//const giftsData = require("./gifts.json");
+// //enabling cors for all routes
+// app.use(cors({ origin: "http://localhost:5173" }));
 
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
