@@ -47,6 +47,12 @@ const HomePage = () => {
             <option value="art">art</option>
             <option value="wellness">wellness </option>
             <option value="adrenaline">adrenaline </option>
+            <option value="indoor">indoor</option>
+            <option value="outdoor">outdoor</option>
+            <option value="food">food</option>
+            <option value="trip">trip</option>
+            <option value="sport">sport</option>
+            <option value="music">music</option>
           </select>
         </label>
 
@@ -59,9 +65,9 @@ const HomePage = () => {
           />
         </label>
 
-        <ul>
+        <ul className="giftList">
           {gifts.map((gift) => (
-            <li key={gift._id}>
+            <li key={gift._id} className="giftItem">
               <div>
                 <img
                   src={gift.imageURL}

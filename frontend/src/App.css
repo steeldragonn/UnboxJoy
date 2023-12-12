@@ -5,6 +5,18 @@
   text-align: center;
 }
 
-li {
-  border: 1px;
+.giftList {
+  list-style: none;
+  padding: 0;
+}
+
+.giftItem {
+  border: 1px solid #0f0e0e;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.giftItem img {
+  max-width: 100px;
+  max-height: 100px;
 }
