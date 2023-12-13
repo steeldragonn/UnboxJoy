@@ -16,11 +16,13 @@ function App() {
   return (
     <div className="App">
       <AuthProviderWrapper>
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/gifts" element={<HomePage />} />
+          <Route path="/gifts/:giftId" element={<GiftDetailsPage />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </AuthProviderWrapper>
