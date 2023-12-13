@@ -31,7 +31,6 @@ router.get("/:giftId", (req, res, next) => {
     .catch((error) => res.json(error));
 });
 
-
 // POST request - adding a selected gift to favorites
 router.post("/favorites/:giftId", async (req, res, next) => {
   try {
@@ -71,7 +70,7 @@ router.get("/category/:giftCategory", (req, res) => {
 router.get("/numberOfPeople/:numberOfPeople", (req, res) => {
   const { numberOfPeople } = req.params;
   console.log(numberOfPeople);
-  Gift.find({ numberOfPeople })
+  Gift.find({ numberOfPeople: { $eq: numberOfPeople } })
     .then((gifts) => res.status(200).json(gifts))
     .catch((error) => res.json(error));
 });
