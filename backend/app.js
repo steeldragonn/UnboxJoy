@@ -18,8 +18,8 @@ app.use("/auth", authRoutes);
 const giftRoutes = require("./routes/gift.routes");
 app.use("/gifts", giftRoutes);
 
-const giftBookingRoutes = require("./routes/gift-booking.routes");
-app.use("/", giftBookingRoutes);
+const giftCartRoutes = require("./routes/gift-cart.routes");
+app.use("/", giftCartRoutes);
 
 require("./error-handling")(app);
 
