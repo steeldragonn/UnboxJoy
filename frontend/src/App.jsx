@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import HomePage from "./pages/HomePage";
 import "./App.css";
+import GiftDetailsPage from "./pages/GiftDetailsPage";
 import { AuthProviderWrapper } from "./context/auth.context";
 
 import Cart from "./pages/Cart";
