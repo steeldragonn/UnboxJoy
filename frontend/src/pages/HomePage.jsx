@@ -5,6 +5,8 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import FilteringComponent from "../components/FilteringComp";
 
+const API_URL = "http://localhost:5005";
+
 const HomePage = () => {
   const [gifts, setGifts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
