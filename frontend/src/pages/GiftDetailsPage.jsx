@@ -14,47 +14,48 @@ const GiftDetailsPage = () => {
       .get(`${API_URL}/gifts/${giftId}`)
       .then((response) => {
         setGift(response.data);
+        console.log("gift details fetched", response.data);
       })
       .catch((error) => {
         console.error("error getting gift details", error);
       });
   }, [giftId]);
 
+  console.log("gift details", gift);
+
   const handleAddToCart = () => {
-    if (gift) {
-      addToCart(gift._id);
-      console.log("gift added to cart");
-    }
+    console.log("gift added to cart");
   };
 
-  //const handleAddToFavorites here
-  const handleAddToFavorites = async () => {
-    try {
-      const userId = "your_user_id_here";
-      await axios.post(`${API_URL}/favorites/${giftId}`, { userId });
-      console.log("Gift added to favorites!");
-    } catch (error) {
-      console.error("Error adding gift to favorites", error);
-    }
+  const handleAddToFavorites = () => {
+    console.log("gift added to favorites");
   };
+
+  console.log("gift details", gift);
 
   return (
     <div>
-      <h2>{gift.name}</h2>
-      <img
-        src={gift.imageUrl}
-        alt={gift.name}
-        style={{ maxWidth: "300px", maxHeight: "300px" }}
-      />
-      <p>{gift.description}</p>
-      <p>{gift.price}</p>
-      <p>
-        Location: {gift.location.city}, {gift.location.country}
-      </p>
-      <p>Category: {gift.category}</p>
-      <p>Number of People: {gift.numberOfPeople}</p>
-      <button onClick={handleAddToCart}>Add to cart</button>
-      <button onClick={handleAddToFavorites}>Add to favs</button>
+      {gift ? (
+        <div>
+          <h2>{gift.name}</h2>
+          <img
+            src={gift.imageURL}
+            alt={gift.name}
+            style={{ maxWidth: "300px", maxHeight: "300px" }}
+          />
+          <p>{gift.description}</p>
+          <p>{gift.price}</p>
+          <p>
+            Location: {gift.location.city}, {gift.location.country}
+          </p>
+          <p>Category: {gift.category}</p>
+          <p>Number of People: {gift.numberOfPeople}</p>
+          <button onClick={handleAddToCart}>Add to cart</button>
+          <button onClick={handleAddToFavorites}>Add to favs</button>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
