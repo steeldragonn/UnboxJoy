@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <AuthProviderWrapper>
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />

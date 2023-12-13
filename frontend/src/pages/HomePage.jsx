@@ -4,6 +4,7 @@ import axios from "axios";
 // import Gift from "backend/models/Gift.model";
 import Navbar from "../components/Navbar";
 import FilteringComponent from "../components/FilteringComp";
+import GiftCard from "../components/GiftCard";
 
 const API_URL = "http://localhost:5005";
 
@@ -17,6 +18,7 @@ const HomePage = () => {
       .get(`${API_URL}/gifts`)
       .then((response) => {
         const allGifts = response.data;
+        console.log("------------", allGifts);
         setGifts(allGifts);
         setFilteredGifts(allGifts);
       })
@@ -35,34 +37,11 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar />
       <h1>UnboxJoy</h1>
-      <FilteringComponent onFilterChange={handleFilterChange} />
       <div>
         <h2>Choose joy for loved ones</h2>
-        <ul>
-          {gifts.map((gift) => (
-            <li key={gift._id}>
-              <div>
-                <img
-                  src={gift.imageURL}
-                  alt={gift.name}
-                  style={{ maxWidth: "100px", maxHeight: "100px" }}
-                />
-                <h3>{gift.name}</h3>
-                <p>{gift.description}</p>
-                <p>price: ${gift.price}</p>
-                <p>
-                  location: {gift.location.city}, {gift.location.country}
-                </p>
-                <p>category: {gift.category}</p>
-                <p>number of People: {gift.numberOfPeople}</p>
-                <Link to={`/gifts/${gift._id}`}>Details</Link>
-              </div>
-            </li>
-          ))}
-        </ul>
       </div>
+      <GiftCard gifts={gifts} />
     </div>
   );
 };
