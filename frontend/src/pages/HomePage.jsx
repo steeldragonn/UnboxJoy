@@ -7,29 +7,57 @@ import Navbar from "../components/Navbar";
 const HomePage = () => {
   const [gifts, setGifts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedNumberOfPeople, setSelectedNumberOfPeople] = useState("");
+  // const [selectedNumberOfPeople, setSelectedNumberOfPeople] = useState("");
+
+  const [query, setQuery] = useState("");
+  const [filteredArray, setFilteredArray] = useState([]);
 
   useEffect(() => {
     // create a api call to the backend which is receiving all the gifts.json file from backend
     const API_URL = "http://localhost:5005";
     const params = {};
 
-    if (selectedCategory) {
-      params.category = selectedCategory;
-    }
-    if (selectedNumberOfPeople) {
-      params.numberOfPeople = selectedNumberOfPeople;
-    }
-    console.log(params);
+    // if (selectedCategory) {
+    //   params.category = selectedCategory;
+    // }
+    // if (selectedNumberOfPeople) {
+    //   params.numberOfPeople = selectedNumberOfPeople;
+    // }
+    // console.log(params);
 
     axios
       .get(`${API_URL}/gifts`, { params })
       .then((response) => {
-        setGifts(response.data);
+        // setGifts(response.data);
+        setFilteredArray(response.data);
         console.log(response.data);
       })
       .catch((error) => console.error("Error fetching gifts", error));
-  }, [selectedCategory, selectedNumberOfPeople]);
+  }, []);
+
+  useEffect(() => {
+    setFilteredArray(handleFiltering());
+  }, [query, selectedCategory, gifts]);
+  console.log(
+    "THIS IS WHAT I AM SEARCHING FOR WITH CATEGORY  =>",
+    selectedCategory
+  );
+  console.log(
+    "THIS IS WHAT I AM SEARCHING FOR WITH NUMBER OF PEOPLE =>",
+    query
+  );
+
+  const handleFiltering = () => {
+    return gifts.filter((eachGift) => {
+      return (
+        (selectedCategory === "" ||
+          eachGift.category.includes(selectedCategory)) &&
+        eachGift.numberOfPeople === query
+      );
+    });
+  };
+
+  handleFiltering();
 
   return (
     <div>
@@ -60,13 +88,13 @@ const HomePage = () => {
           Number of People:
           <input
             type="number"
-            value={selectedNumberOfPeople}
-            onChange={(e) => setSelectedNumberOfPeople(Number(e.target.value))}
+            value={query}
+            onChange={(e) => setQuery(Number(e.target.value))}
           />
         </label>
 
         <ul className="giftList">
-          {gifts.map((gift) => (
+          {filteredArray.map((gift) => (
             <li key={gift._id} className="giftItem">
               <div>
                 <img
