@@ -1,7 +1,7 @@
 [
   {
     "name": "Paintball Vanguard Challenge",
-    "price": "30€ for person",
+    "price": 30,
     "description": "Friends are waiting for an exciting and dynamic game in the paintball club. Participants will hide in shelters and behind barricades and shoot each other with paintballs.",
     "imageURL": "https://www.alma-park.de/wp-content/uploads/2016/02/Alma-Park-Paintball2.jpg",
     "location": {
@@ -14,7 +14,7 @@
 
   {
     "name": "Drifting master class",
-    "price": "120€ per person",
+    "price": 120,
     "description": "A professional racer will show you how to stabilize the car when you lose control: during spinning, skidding and side sliding. After that, the participant will test his strength on the track. Get ready to be the eye of the drifting hurricane!",
     "imageURL": "https://img.redbull.com/images/c_crop,w_4830,h_2415,x_0,y_302,f_auto,q_auto/c_scale,w_1200/redbullcom/2019/07/18/5e5e16d2-3d8c-4418-b78e-ba941403444d/piotr-wiecek",
     "location": {
@@ -26,7 +26,7 @@
   },
   {
     "name": "The Fantasicable Zipline",
-    "price": "150€ per person",
+    "price": 150,
     "description": "The Fantasicable consists of a zip-line connecting between two mountains that is 1538 meters long and has a maximum height of 150 meters. The Fantasticable will emulate a flight sensation with a great landscape offering an unforgettable combination of sensations and feelings.",
     "imageURL": "https://www.penaaventura.com.pt/images/atividades/fantasticable/1270/DSC_3806_40pct.jpg",
     "location": {
@@ -38,7 +38,7 @@
   },
   {
     "name": "Motocycle test drive",
-    "price": "80€ per person",
+    "price": 80,
     "description": "The client is waiting for a race on a special track with various obstacles. An experienced instructor will teach the basics of motorcycle management and provide the necessary equipment.",
     "imageURL": "https://plus.unsplash.com/premium_photo-1661963676028-4df834387828?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW90b3N8ZW58MHx8MHx8fDA%3D",
     "location": {
@@ -50,7 +50,7 @@
   },
   {
     "name": "Double test-drive",
-    "price": "300€ per person",
+    "price": 300,
     "description": "The participant will ride two high-speed cars of their choice. It can be a Lamborghini Huracan or a Ferrari 458 Italia Spider. There will always be an experienced driver nearby.",
     "imageURL": "https://i.ytimg.com/vi/OL76P1AsoOQ/maxresdefault.jpg",
     "location": {
@@ -62,7 +62,7 @@
   },
   {
     "name": "Fire line for two",
-    "price": "120€ per person",
+    "price": 120,
     "description": "Friends will go to the shooting range, where they will practice shooting with firearms. An experienced trainer will conduct a safety briefing, provide the necessary equipment and ammunition.",
     "imageURL": "https://donum.ua/image/catalog/Master-clas/Kajan-Tir/new/kaj-new-7.jpg",
     "location": {
@@ -74,7 +74,7 @@
   },
   {
     "name": "Group Karting menace",
-    "price": "60€ per person",
+    "price": 60,
     "description": "Participation in a mass race on cards. Friends will be given the necessary equipment and taken to the track. After the race, you can pick up a printout with speed statistics.",
     "imageURL": "https://vulcanpost.com/wp-content/uploads/2023/02/Evolt-karting-indoor-electric-kart-centre-malaysia-004.jpg",
     "location": {

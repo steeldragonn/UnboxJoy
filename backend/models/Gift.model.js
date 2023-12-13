@@ -6,7 +6,7 @@ const giftSchema = new Schema({
     required: true,
   },
   price: {
-    type: String,
+    type: Number,
   },
   description: {
     type: String,

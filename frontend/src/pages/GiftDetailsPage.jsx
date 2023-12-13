@@ -26,7 +26,26 @@ const GiftDetailsPage = () => {
   }, [giftId]);
 
   const handleAddToCart = () => {
-    console.log("gift added to cart");
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const isItemInCart = cartItems.some((item) => item.id === giftId);
+
+    if (isItemInCart) {
+      console.log("item is already in  cart.");
+    } else {
+      const newItem = {
+        _id: giftId,
+        name: gift.name,
+        price: gift.price,
+      };
+
+      const updatedCart = [...cartItems, newItem];
+
+      //save cart to localstorage
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+      console.log("Item added to cart", newItem);
+    }
   };
 
   const handleAddToFavorites = () => {
@@ -54,7 +73,7 @@ const GiftDetailsPage = () => {
           <img
             src={gift.imageURL}
             alt={gift.name}
-            style={{ maxWidth: "300px", maxHeight: "300px" }}
+            style={{ maxWidth: "500", maxHeight: "420px" }}
           />
           <p>{gift.description}</p>
           <p>{gift.price}</p>
