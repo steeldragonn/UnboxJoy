@@ -1,8 +1,8 @@
 //Cart Item component
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
-
+import { Card } from "react-bootstrap";
+import FilteringComponent from "./FilteringComp";
 function CartItem(props) {
   const { gift, clickToDelete } = props;
   return (
