@@ -3,14 +3,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import FilteringComponent from "./FilteringComp";
-function CartItem(props) {
-  const { gift, clickToDelete } = props;
+
+const CartItem = ({ item }) => {
   return (
     <>
-      <Card className="GiftCard">
+      <Card className="cart-item">
         <div>
-          <h3>{gift.name}</h3>
-          <p>Price: {gift.price}</p>
+          <h3>{item.name}</h3>
+          <p>Price: {item.price}</p>
           <button onClick={() => clickToDelete(gift._id)}>Delete</button>
           <button>
             <Link
@@ -25,6 +25,6 @@ function CartItem(props) {
       </Card>
     </>
   );
-}
+};
 
 export default CartItem;
