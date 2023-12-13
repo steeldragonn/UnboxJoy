@@ -7,7 +7,7 @@ import CartItem from "../components/CartItem";
 const API_URL = "http://localhost:5005";
 const token = localStorage.getItem("authToken");
 console.log(token);
-function AddToCart() {
+function addToCart() {
   const [gifts, setGifts] = useState([]);
   const [cart, setCart] = useState([]);
 
@@ -50,4 +50,4 @@ function AddToCart() {
   );
 }
 
-export default AddToCart;
+export default addToCart;
