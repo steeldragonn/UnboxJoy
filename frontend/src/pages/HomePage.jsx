@@ -52,7 +52,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar />
       <h1>UnboxJoy</h1>
       <div>
         <h2>Choose joy for loved ones</h2>
