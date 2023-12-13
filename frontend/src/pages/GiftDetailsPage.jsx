@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import addToCart from "./Cart";
 
 const API_URL = "http://localhost:5005";
 
 const GiftDetailsPage = () => {
   const { giftId } = useParams();
   const [gift, setGift] = useState(null);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     axios
@@ -19,19 +19,32 @@ const GiftDetailsPage = () => {
       .catch((error) => {
         console.error("error getting gift details", error);
       });
-  }, [giftId]);
 
-  console.log("gift details", gift);
+    // Check if gift is already in favorites
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(favorites.some((fav) => fav._id === giftId));
+  }, [giftId]);
 
   const handleAddToCart = () => {
     console.log("gift added to cart");
   };
 
   const handleAddToFavorites = () => {
-    console.log("gift added to favorites");
-  };
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const isCurrentlyFavorite = favorites.some((fav) => fav._id === giftId);
 
-  console.log("gift details", gift);
+    if (isCurrentlyFavorite) {
+      // If already in favorites, remove it
+      const updatedFavorites = favorites.filter((fav) => fav._id !== giftId);
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      setIsFavorite(false);
+    } else {
+      // If not in favorites, add it
+      const updatedFavorites = [...favorites, gift];
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      setIsFavorite(true);
+    }
+  };
 
   return (
     <div>
@@ -51,7 +64,9 @@ const GiftDetailsPage = () => {
           <p>Category: {gift.category}</p>
           <p>Number of People: {gift.numberOfPeople}</p>
           <button onClick={handleAddToCart}>Add to cart</button>
-          <button onClick={handleAddToFavorites}>Add to favs</button>
+          <button onClick={handleAddToFavorites}>
+            {isFavorite ? "Remove from favs" : "Add to favs"}
+          </button>
         </div>
       ) : (
         <p>Loading...</p>

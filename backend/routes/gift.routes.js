@@ -36,26 +36,32 @@ router.post("/favorites/:giftId", async (req, res, next) => {
   try {
     const { userId } = req.body;
     const { giftId } = req.params;
+
     await User.findByIdAndUpdate(userId, {
-      $push: { favorites: giftId },
+      $addToSet: { favorites: giftId },
     });
-    res.status(200).json({ message: "gift added to favorites!" });
+
+    res.status(200).json({ message: "gift added to favorites" });
   } catch (error) {
     next(error);
   }
 });
 
+//GET request, users favorites
 router.get("/:userId/favorites", async (req, res, next) => {
   try {
     const { userId } = req.params;
-    const userFavoriteGifts = await User.find().populate("favorites");
-    res.status(200).json(userFavoriteGifts);
+    const user = await User.findById(userId).populate("favorites");
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.status(200).json(user.favorites);
   } catch (error) {
     next(error);
   }
 });
-
-//gift cart
 
 //route search by categoryYYYYYYYYYYYYYYYYYYY
 router.get("/category/:giftCategory", (req, res) => {
