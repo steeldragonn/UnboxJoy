@@ -9,6 +9,8 @@ import HomePage from "./pages/HomePage";
 import "./App.css";
 import { AuthProviderWrapper } from "./context/auth.context";
 
+import Cart from "./pages/Cart";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/gifts" element={<HomePage />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </AuthProviderWrapper>
     </div>

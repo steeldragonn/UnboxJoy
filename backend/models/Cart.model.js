@@ -1,6 +1,7 @@
+//Cart Model
 const { Schema, model } = require("mongoose");
 
-const bookingSchema = new Schema(
+const cartSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -18,6 +19,6 @@ const bookingSchema = new Schema(
   }
 );
 
-const Booking = model("Booking", bookingSchema);
+const Cart = model("Booking", cartSchema);
 
-module.exports = Booking;
+module.exports = Cart;
