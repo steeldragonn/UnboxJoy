@@ -38,5 +38,25 @@ const GiftDetailsPage = () => {
     }
   };
 
-  return <div></div>;
+  return (
+    <div>
+      <h2>{gift.name}</h2>
+      <img
+        src={gift.imageUrl}
+        alt={gift.name}
+        style={{ maxWidth: "300px", maxHeight: "300px" }}
+      />
+      <p>{gift.description}</p>
+      <p>{gift.price}</p>
+      <p>
+        Location: {gift.location.city}, {gift.location.country}
+      </p>
+      <p>Category: {gift.category}</p>
+      <p>Number of People: {gift.numberOfPeople}</p>
+      <button onClick={handleAddToCart}>Add to cart</button>
+      <button onClick={handleAddToFavorites}>Add to favs</button>
+    </div>
+  );
 };
+
+export default GiftDetailsPage;
