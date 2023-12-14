@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { AuthContext } from "../context/auth.context";
+
+
 const API_URL = "http://localhost:5005";
 
 const GiftDetailsPage = () => {
   const { giftId } = useParams();
   const [gift, setGift] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false);
+  const { user } = useContext(AuthContext);
 
+  console.log("ACTIVE USER =>", user);
   useEffect(() => {
     axios
       .get(`${API_URL}/gifts/${giftId}`)
@@ -22,7 +27,8 @@ const GiftDetailsPage = () => {
     // Check if gift is already in favorites
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setIsFavorite(favorites.some((fav) => fav._id === giftId));
-  }, [giftId]);
+    console.log();
+  }, [giftId, user]);
 
   const handleAddToCart = () => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -39,6 +45,11 @@ const GiftDetailsPage = () => {
       const updatedCart = [...cartItems, newItem];
       // save cart to local storage
       localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+      if (typeof props.updateCart === "function") {
+        props.updateCart(updatedCart);
+      }
+
       console.log("Item added to cart", newItem);
     }
   };

@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
 
-function Navbar() {
+function Navbar({ cartLength }) {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -22,7 +22,9 @@ function Navbar() {
             <button>Favorites</button>
           </Link>
           <Link to="/cart">
-            <button>Cart</button>
+            <button>
+              Cart <span>{cartLength}</span>
+            </button>
           </Link>
           <button onClick={handleLogout}>Logout</button>
           <br />
