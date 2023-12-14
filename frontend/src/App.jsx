@@ -11,7 +11,12 @@ import GiftDetailsPage from "./pages/GiftDetailsPage";
 import GiftFavorites from "./pages/GiftFavorites";
 import Checkout from "./pages/Checkout";
 import { AuthProviderWrapper } from "./context/auth.context";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 import Payment from "./pages/Payment";
+
 import Cart from "./pages/Cart";
 
 function App() {
