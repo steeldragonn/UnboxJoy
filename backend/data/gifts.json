@@ -119,7 +119,7 @@
   },
   {
     "name": "Wood-burning bath for the company",
-    "price": 50,
+    "price": 45,
     "description": "A session of bath procedures from a parmeister is waiting for friends. It includes steaming, aromatherapy, massage with birch and oak brooms and relaxation in the hayloft.",
     "imageURL": "https://par-torg.com/wp-content/uploads/b/6/e/b6ea79147151b635906072632ea2cdfa.jpeg",
     "location": {
@@ -132,7 +132,7 @@
   },
   {
     "name": "Sabai massage",
-    "price": 65,
+    "price": 40,
     "description": "A unique combination of point impact on the body and massage using natural aromatic oils. All muscle groups will be worked out in Thai and Balinese techniques.",
     "imageURL": "https://cdn.sportadictos.com/files/2019/05/Hombre-pindas-espalda.jpg",
     "location": {
@@ -145,7 +145,7 @@
   },
   {
     "name": "Hamam for two",
-    "price": 35,
+    "price": 40,
     "description": "SPA rest in Eastern traditions. Guests will visit one of the salons of their choice. There, participants can enjoy steaming in the hammam, peeling, moisturizing with oils, as well as massage.",
     "imageURL": "https://gde-teplo.ru/wp-content/uploads/2015/01/tur-banya-xamam_1.jpg",
     "location": {
@@ -171,7 +171,7 @@
   },
   {
     "name": "Creating a sculpture",
-    "price": 25,
+    "price": 30,
     "description": "Under the guidance of an experienced craftsman, participants will learn to create sculptures based on ready-made sketches. They will be given clay and shown how to work with the material.",
     "imageURL": "https://media.istockphoto.com/id/645543606/video/sculptor.jpg?s=640x640&k=20&c=dR3pMTDjlPfJzS0ZdGWqF31UcD3Qn1PsyOw6a5vnjWk=",
     "location": {
@@ -278,19 +278,6 @@
     "price": 50,
     "description": " Participants will refine their finger technique, learn the intricacies of playing on a grand piano, and engage in purposeful practice. Under the guidance of skilled instructors, participants will acquire a solid foundation in piano playing, blending technical prowess with expressive artistry.",
     "imageURL": "https://static.vecteezy.com/system/resources/thumbnails/001/333/291/original/tilt-up-of-mature-man-playing-piano-video.jpg",
-    "location": {
-      "city": "Berlin",
-      "country": "Germany",
-      "duration": "2h"
-    },
-    "category": "music",
-    "numberOfPeople": 1
-  },
-  {
-    "name": "Vocal class",
-    "price": 40,
-    "description": "A vocal lesson consisting of singing and performing compositions to music. The class will teach you how to breathe correctly, use the diaphragm and extract a clear sound.",
-    "imageURL": "https://api.thefutzbutler.com/storage/104/Jónsi_-_Ferrara_22-07-2010.jpg",
     "location": {
       "city": "Berlin",
       "country": "Germany",
