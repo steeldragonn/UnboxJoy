@@ -122,7 +122,9 @@ const HomePage = () => {
                 />
                 <h3>{gift.name}</h3>
                 <p>{gift.description}</p>
+
                 <p>Price per person : {gift.price}€</p>
+
                 <p>
                   Location: {gift.location.city}, {gift.location.country}
                 </p>

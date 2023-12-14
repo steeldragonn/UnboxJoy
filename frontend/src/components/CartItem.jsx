@@ -1,30 +1,34 @@
-//Cart Item component
-import React from "react";
-import { Link } from "react-router-dom";
-import { Card } from "react-bootstrap";
-import FilteringComponent from "./FilteringComp";
-function CartItem(props) {
-  const { gift, clickToDelete } = props;
+import React, { useState } from "react";
+
+const CartItem = ({ item, handleRemoveFromCart }) => {
+  const [quantity, setQuantity] = useState(item.quantity || 1);
+
+  const handleIncreaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
-    <>
-      <Card className="GiftCard">
-        <div>
-          <h3>{gift.name}</h3>
-          <p>Price: {gift.price}</p>
-          <button onClick={() => clickToDelete(gift._id)}>Delete</button>
-          <button>
-            <Link
-              style={{ textDecoration: "none" }}
-              target="_blank"
-              to="https://www.paypal.com/de/home"
-            >
-              Proceed to Pay
-            </Link>
-          </button>
-        </div>
-      </Card>
-    </>
+    <li key={item._id}>
+      <p>{item.name}</p>
+      <p>{item.price}€ per person </p>
+
+      <div>
+        <button onClick={handleDecreaseQuantity}>-</button>
+        <p>Quantity: {quantity}</p>
+        <button onClick={handleIncreaseQuantity}>+</button>
+      </div>
+
+      <button onClick={() => handleRemoveFromCart(item._id)}>
+        Remove from Cart
+      </button>
+    </li>
   );
-}
+};
 
 export default CartItem;
