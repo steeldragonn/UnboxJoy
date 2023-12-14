@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/auth.context";
 
+
 const API_URL = "http://localhost:5005";
 
 const GiftDetailsPage = () => {
@@ -31,25 +32,24 @@ const GiftDetailsPage = () => {
 
   const handleAddToCart = () => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const isItemInCart = cartItems.some((item) => item.id === giftId);
+    const isItemInCart = cartItems.some((item) => item._id === giftId);
 
     if (isItemInCart) {
-      console.log("item is already in  cart.");
+      console.log("item is already in cart.");
     } else {
       const newItem = {
         _id: giftId,
         name: gift.name,
         price: gift.price,
       };
-
       const updatedCart = [...cartItems, newItem];
-
-      //save cart to localstorage
+      // save cart to local storage
       localStorage.setItem("cart", JSON.stringify(updatedCart));
+
       if (typeof props.updateCart === "function") {
         props.updateCart(updatedCart);
       }
+
       console.log("Item added to cart", newItem);
     }
   };
@@ -79,7 +79,7 @@ const GiftDetailsPage = () => {
           <img
             src={gift.imageURL}
             alt={gift.name}
-            style={{ maxWidth: "500", maxHeight: "420px" }}
+            style={{ maxWidth: "500px", maxHeight: "420px" }}
           />
           <p>{gift.description}</p>
           <p>{gift.price}</p>
