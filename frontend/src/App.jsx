@@ -14,16 +14,27 @@ import { AuthProviderWrapper } from "./context/auth.context";
 import Cart from "./pages/Cart";
 
 function App() {
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")));
+
+  const handleClick = (item) => {
+    console.log(item);
+  };
+  const updateCart = (newCart) => {
+    setCart(newCart);
+  };
   return (
     <div className="App">
       <AuthProviderWrapper>
-        <Navbar />
+        <Navbar cartLength={cart.length} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/gifts" element={<HomePage />} />
-          <Route path="/gifts/:giftId" element={<GiftDetailsPage />} />
+          <Route
+            path="/gifts/:giftId"
+            element={<GiftDetailsPage updateCart={updateCart} />}
+          />
           <Route path="/favorites" element={<GiftFavorites />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
