@@ -1,7 +1,11 @@
 [
   {
     "name": "Paintball Vanguard Challenge",
+
     "price": 45,
+
+
+
     "description": "Friends are waiting for an exciting and dynamic game in the paintball club. Participants will hide in shelters and behind barricades and shoot each other with paintballs.",
     "imageURL": "https://www.alma-park.de/wp-content/uploads/2016/02/Alma-Park-Paintball2.jpg",
     "location": {
@@ -42,7 +46,9 @@
   {
     "name": "Motocycle test drive",
     "price": 80,
+
     "description": "You are waiting for a race on a special track with various obstacles. An experienced instructor will teach the basics of motorcycle management and provide the necessary equipment.",
+
     "imageURL": "https://plus.unsplash.com/premium_photo-1661963676028-4df834387828?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW90b3N8ZW58MHx8MHx8fDA%3D",
     "location": {
       "city": "Berlin",
@@ -366,7 +372,7 @@
   },
   {
     "name": "Horse Trip",
-    "price": 70,
+    "price": 80,
     "description": "Participants can enjoy a fun lesson during which they will saddle horses and learn basic riding styles. Participants will enjoy an unusual activity and have a pleasant time together.",
     "imageURL": "https://www.horseclass.com/wp-content/uploads/2021/11/stop-leaning-forward-while-riding.jpg",
     "location": {
@@ -380,7 +386,7 @@
   {
     "name": "Bachata",
     "price": 70,
-    "description": "Mmerse yourself in the sultry dance style as expert instructors guide you through the passionate steps, ensuring an enchanting experience for all skill levels.",
+    "description": "Merse yourself in the sultry dance style as expert instructors guide you through the passionate steps, ensuring an enchanting experience for all skill levels.",
     "imageURL": "https://static.wixstatic.com/media/45751f_a19ce17255f54cd5960bc35260fafad4~mv2.webp",
     "location": {
       "city": "Berlin",
