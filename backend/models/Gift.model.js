@@ -16,14 +16,14 @@ const giftSchema = new Schema({
     default:
       "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kunstkopie.de%2Fa%2Fgustav-klimt%2Fgustavklimt-damemitfcher.html&psig=AOvVaw1uq4DT6kgVOTSVUf28gQdx&ust=1702033894138000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLC9vtaR_oIDFQAAAAAdAAAAABAE",
   },
+  duration: {
+    type: String,
+  },
   location: {
     city: {
       type: String,
     },
     country: {
-      type: String,
-    },
-    duration: {
       type: String,
     },
   },
