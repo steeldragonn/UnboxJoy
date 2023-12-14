@@ -1,18 +1,23 @@
-/* src/index.css */
+html {
+  background-color: rgb(10, 11, 11);
+}
 
 body {
   margin: 0;
-  background-color: white;
+  background-color: rgb(16, 15, 15);
+  color: #111213;
+  display: flex;
 }
 
 a {
   list-style: none;
-  color: black;
+  color: rgb(9, 8, 8);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 button,
 select {
+  /* background-color: transparent; */
   padding: 5px 10px;
   min-width: 50px;
   margin: 5px;
@@ -34,20 +39,26 @@ textarea {
 }
 
 nav {
-  background: olivedrab;
-  color: white;
+  background: transparent;
+  color: transparent;
   padding: 0px 20px;
-  box-shadow: 0px 1px 2px gray;
   width: 100%;
   margin-bottom: 15px;
-  padding: 5px;
+  margin-right: 10px;
+  padding: 20px;
+  border: 10px;
+  /* display: flex;
+  justify-content: flex-start; */
 }
 
 nav li {
   list-style: none;
-  color: white;
+  color: transparent;
+  margin: 30px;
+  padding: 10px;
   font-size: 24px;
   font-weight: 600;
+  justify-items: stretch;
 }
 
 .card {
@@ -86,11 +97,7 @@ nav li {
 
 .SignupPage,
 .LoginPage {
-  background-color: white;
-}
-
-.LoginPage {
-  background-color: white;
+  background-color: transparent;
 }
 
 .EditProjectPage form,
@@ -111,4 +118,19 @@ nav li {
 
 .TaskCard {
   background-color: #dfeef9;
+}
+/* h1 {
+  color: yellow;
+}
+h2 {
+  color: yellow;
+} */
+.title {
+  color: rgb(204, 255, 127);
+  margin: 30 px;
+}
+
+.giftItem {
+  border: solid white 1 px;
+  padding: 30px;
 }
