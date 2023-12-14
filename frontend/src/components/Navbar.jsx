@@ -22,7 +22,7 @@ function Navbar() {
             <button>Favorites</button>
           </Link>
           <Link to="/cart">
-            <button>Cart</button>
+            <button>Cart {}</button>
           </Link>
           <button onClick={handleLogout}>Logout</button>
           <br />

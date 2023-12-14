@@ -16,25 +16,32 @@ const Cart = () => {
     setCartItems(updatedCart);
   };
 
-  const handleIncreaseQuantity = (itemId) => {
-    const updatedCart = cartItems.map((item) =>
-      item._id === itemId
-        ? { ...item, quantity: (item.quantity || 1) + 1 }
-        : item
-    );
+  const handleIncreaseQuantity = (item) => {
+    console.log(item);
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const newItem = {
+      _id: item._id,
+      name: item.name,
+      price: item.price,
+    };
+
+    const updatedCart = [...cartItems, newItem];
+    // save cart to local storage
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(updatedCart);
+    console.log("Item added to cart", newItem);
   };
 
-  const handleDecreaseQuantity = (itemId) => {
-    const updatedCart = cartItems.map((item) =>
-      item._id === itemId
-        ? { ...item, quantity: (item.quantity || 1) - 1 }
-        : item
-    );
-
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(updatedCart);
+  const handleDecreaseQuantity = (item) => {
+    console.log(item);
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    const allIds = cartItems.map((eachCartItem) => {
+      return eachCartItem._id;
+    });
+    const lastIndex = allIds.lastIndexOf(item._id);
+    console.log(lastIndex);
+    cartItems.splice(lastIndex, 1);
+    localStorage.setItem("cart", JSON.stringify(cartItems));
   };
 
   const totalItems = cartItems.length;
@@ -42,6 +49,8 @@ const Cart = () => {
     (curr, item) => curr + item.price * (item.quantity || 1),
     0
   );
+
+  console.log(totalPrice);
 
   return (
     <div>
