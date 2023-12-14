@@ -379,7 +379,7 @@
   },
   {
     "name": "Horse Trip",
-    "price": 70,
+    "price": 80,
     "description": "Participants can enjoy a fun lesson during which they will saddle horses and learn basic riding styles. Participants will enjoy an unusual activity and have a pleasant time together.",
     "imageURL": "https://www.horseclass.com/wp-content/uploads/2021/11/stop-leaning-forward-while-riding.jpg",
     "location": {
@@ -393,7 +393,7 @@
   {
     "name": "Bachata",
     "price": 70,
-    "description": "Mmerse yourself in the sultry dance style as expert instructors guide you through the passionate steps, ensuring an enchanting experience for all skill levels.",
+    "description": "Merse yourself in the sultry dance style as expert instructors guide you through the passionate steps, ensuring an enchanting experience for all skill levels.",
     "imageURL": "https://static.wixstatic.com/media/45751f_a19ce17255f54cd5960bc35260fafad4~mv2.webp",
     "location": {
       "city": "Berlin",
