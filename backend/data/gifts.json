@@ -1,12 +1,13 @@
 [
   {
     "name": "Paintball Vanguard Challenge",
-    "price": "30€ for person",
+    "price": 45,
     "description": "Friends are waiting for an exciting and dynamic game in the paintball club. Participants will hide in shelters and behind barricades and shoot each other with paintballs.",
     "imageURL": "https://www.alma-park.de/wp-content/uploads/2016/02/Alma-Park-Paintball2.jpg",
     "location": {
       "city": "Berlin",
-      "country": "Germany"
+      "country": "Germany",
+      "duration": "4h"
     },
     "category": "adrenaline",
     "numberOfPeople": 10
@@ -14,74 +15,392 @@
 
   {
     "name": "Drifting master class",
-    "price": "120€ per person",
+    "price": 120,
     "description": "A professional racer will show you how to stabilize the car when you lose control: during spinning, skidding and side sliding. After that, the participant will test his strength on the track. Get ready to be the eye of the drifting hurricane!",
     "imageURL": "https://img.redbull.com/images/c_crop,w_4830,h_2415,x_0,y_302,f_auto,q_auto/c_scale,w_1200/redbullcom/2019/07/18/5e5e16d2-3d8c-4418-b78e-ba941403444d/piotr-wiecek",
     "location": {
       "city": "Berlin",
-      "country": "Germany"
+      "country": "Germany",
+      "duration": "1,5h"
     },
     "category": "adrenaline",
     "numberOfPeople": 1
   },
   {
     "name": "The Fantasicable Zipline",
-    "price": "150€ per person",
+    "price": 150,
     "description": "The Fantasicable consists of a zip-line connecting between two mountains that is 1538 meters long and has a maximum height of 150 meters. The Fantasticable will emulate a flight sensation with a great landscape offering an unforgettable combination of sensations and feelings.",
     "imageURL": "https://www.penaaventura.com.pt/images/atividades/fantasticable/1270/DSC_3806_40pct.jpg",
     "location": {
       "city": "Porto",
-      "country": "Portugal"
+      "country": "Portugal",
+      "duration": "30m"
     },
     "category": "adrenaline",
     "numberOfPeople": 1
   },
   {
     "name": "Motocycle test drive",
-    "price": "80€ per person",
-    "description": "The client is waiting for a race on a special track with various obstacles. An experienced instructor will teach the basics of motorcycle management and provide the necessary equipment.",
+    "price": 80,
+    "description": "You are waiting for a race on a special track with various obstacles. An experienced instructor will teach the basics of motorcycle management and provide the necessary equipment.",
     "imageURL": "https://plus.unsplash.com/premium_photo-1661963676028-4df834387828?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW90b3N8ZW58MHx8MHx8fDA%3D",
     "location": {
       "city": "Berlin",
-      "country": "Germany"
+      "country": "Germany",
+      "duration": "available all day"
     },
     "category": "adrenaline",
     "numberOfPeople": 1
   },
   {
     "name": "Double test-drive",
-    "price": "300€ per person",
+    "price": 300,
     "description": "The participant will ride two high-speed cars of their choice. It can be a Lamborghini Huracan or a Ferrari 458 Italia Spider. There will always be an experienced driver nearby.",
     "imageURL": "https://i.ytimg.com/vi/OL76P1AsoOQ/maxresdefault.jpg",
     "location": {
       "city": "Paris",
-      "country": "France"
+      "country": "France",
+      "duration": "available all day"
     },
     "category": "adrenaline",
     "numberOfPeople": 2
   },
   {
     "name": "Fire line for two",
-    "price": "120€ per person",
+    "price": 120,
     "description": "Friends will go to the shooting range, where they will practice shooting with firearms. An experienced trainer will conduct a safety briefing, provide the necessary equipment and ammunition.",
     "imageURL": "https://donum.ua/image/catalog/Master-clas/Kajan-Tir/new/kaj-new-7.jpg",
     "location": {
       "city": "Berlin",
-      "country": "Germany"
+      "country": "Germany",
+      "duration": "1,5h"
     },
     "category": "adrenaline",
     "numberOfPeople": 2
   },
   {
     "name": "Group Karting menace",
-    "price": "60€ per person",
+    "price": 60,
     "description": "Participation in a mass race on cards. Friends will be given the necessary equipment and taken to the track. After the race, you can pick up a printout with speed statistics.",
     "imageURL": "https://vulcanpost.com/wp-content/uploads/2023/02/Evolt-karting-indoor-electric-kart-centre-malaysia-004.jpg",
     "location": {
       "city": "Berlin",
-      "country": "Germany"
+      "country": "Germany",
+      "duration": "1,5 h"
     },
     "category": "adrenaline",
     "numberOfPeople": 3
+  },
+  {
+    "name": "Massage in four hands",
+    "price": 40,
+    "description": "SPA session of combined massage performed by two masters. The procedure will relieve tension and improve lymphatic circulation, and aroma oils will make the skin soft and silky.",
+    "imageURL": "https://www.vivadayspa.com/wp-content/uploads/2019/10/4-Hands-Massage_DSC04364_2000x635.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "wellness",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "SPA in vat for two",
+    "price": 80,
+    "description": "Relaxation procedure in hot tubs for steam. The session consists of several stages: salt rubbing, bathing in herbs, warming up and soap-birch massage.",
+    "imageURL": "https://www.badkleinkirchheim.at/user_upload_BKK/_processed_/2/7/csm_2__c__www.kirchheimerhof.at_2d799eb7de.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "wellness",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Wood-burning bath for the company",
+    "price": 50,
+    "description": "A session of bath procedures from a parmeister is waiting for friends. It includes steaming, aromatherapy, massage with birch and oak brooms and relaxation in the hayloft.",
+    "imageURL": "https://par-torg.com/wp-content/uploads/b/6/e/b6ea79147151b635906072632ea2cdfa.jpeg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "available all day"
+    },
+    "category": "wellness",
+    "numberOfPeople": 4
+  },
+  {
+    "name": "Sabai massage",
+    "price": 65,
+    "description": "A unique combination of point impact on the body and massage using natural aromatic oils. All muscle groups will be worked out in Thai and Balinese techniques.",
+    "imageURL": "https://cdn.sportadictos.com/files/2019/05/Hombre-pindas-espalda.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "wellness",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Hamam for two",
+    "price": 35,
+    "description": "SPA rest in Eastern traditions. Guests will visit one of the salons of their choice. There, participants can enjoy steaming in the hammam, peeling, moisturizing with oils, as well as massage.",
+    "imageURL": "https://gde-teplo.ru/wp-content/uploads/2015/01/tur-banya-xamam_1.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "available all day"
+    },
+    "category": "wellness",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Pottery master class for two",
+    "price": 35,
+    "description": "Visitors will learn how to sculpt figures. They will try to center the clay and shape it.",
+    "imageURL": "https://d18sx48tl6nre5.cloudfront.net/images/webp_xl_11aac43b88e73ac7ef72337ad178bc54.webp",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5 h"
+    },
+    "category": "art",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Creating a sculpture",
+    "price": 25,
+    "description": "Under the guidance of an experienced craftsman, participants will learn to create sculptures based on ready-made sketches. They will be given clay and shown how to work with the material.",
+    "imageURL": "https://media.istockphoto.com/id/645543606/video/sculptor.jpg?s=640x640&k=20&c=dR3pMTDjlPfJzS0ZdGWqF31UcD3Qn1PsyOw6a5vnjWk=",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5 h"
+    },
+    "category": "art",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Jewelry workshop",
+    "price": 80,
+    "description": "Visitors will attend a class where they will learn the art of jewelry making.",
+    "imageURL": "https://www.papermetal.co.uk/wp-content/uploads/2019/08/papermetal-JulieBailey-jewellerymaking-workshop-overhead.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "art",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Painting and wine",
+    "price": 40,
+    "description": "The client will go to the creativity studio for drawing classes. The teacher will treat the participants to wine and help them create paintings with oil or acrylic paints.",
+    "imageURL": "https://popuppainting.com/wp-content/uploads/2019/07/paint-with-wine-02-scaled.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "art",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Creating a picture from epoxy resin",
+    "price": 45,
+    "description": "The participant will be able to draw an abstract composition with the help of pigments, glitters and powders.",
+    "imageURL": "https://i.ytimg.com/vi/PPOadisLPjE/maxresdefault.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "art",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Master class for creating a perfume",
+    "price": 70,
+    "description": "Under the guidance of seasoned perfumers, delve into the meticulous craftsmanship of fragrance composition, meticulously selecting and blending notes to craft a bespoke perfume that reflects your distinct taste and style.",
+    "imageURL": "https://www.intimeperfume.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/d/s/dsc_3806_1_1_2.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5 h"
+    },
+    "category": "art",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Drum class",
+    "price": 50,
+    "description": "A professional musician will talk about the basics of playing on the rig and teach you how to hold the drumsticks correctly. After, the client will play simple musical connections and rhythms based on favorite song",
+    "imageURL": "https://rolandcorp.com.au/blog/wp-content/uploads/2020/09/record-e-drums-960x600-1.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "music",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "DJ master class",
+    "price": 60,
+    "description": "Individual lesson from an experienced DJ. A beginner will learn how to work with equipment, learn mixing techniques, sound techniques and try to mix tracks.",
+    "imageURL": "https://recordhead.biz/wp-content/uploads/2019/04/dark-1850120_1280-800x445-1.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "music",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Guitar class",
+    "price": 50,
+    "description": "Participants will gain proficiency in the art of finger positioning, explore the nuances of working with a combo amplifier, and engage in dedicated practice sessions. Our expert instructors provide comprehensive guidance, ensuring a holistic learning experience that enhances both technical skills and musical expression.",
+    "imageURL": "https://killerguitarrigs.com/wp-content/uploads/2021/12/electric_player-800x445.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "music",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Piano class",
+    "price": 50,
+    "description": " Participants will refine their finger technique, learn the intricacies of playing on a grand piano, and engage in purposeful practice. Under the guidance of skilled instructors, participants will acquire a solid foundation in piano playing, blending technical prowess with expressive artistry.",
+    "imageURL": "https://static.vecteezy.com/system/resources/thumbnails/001/333/291/original/tilt-up-of-mature-man-playing-piano-video.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "music",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Vocal class",
+    "price": 40,
+    "description": "A vocal lesson consisting of singing and performing compositions to music. The class will teach you how to breathe correctly, use the diaphragm and extract a clear sound.",
+    "imageURL": "https://api.thefutzbutler.com/storage/104/Jónsi_-_Ferrara_22-07-2010.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "music",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Vocal class",
+    "price": 40,
+    "description": "A vocal lesson consisting of singing and performing compositions to music. The class will teach you how to breathe correctly, use the diaphragm and extract a clear sound.",
+    "imageURL": "https://api.thefutzbutler.com/storage/104/Jónsi_-_Ferrara_22-07-2010.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "sport",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Wine tasting for two",
+    "price": 45,
+    "description": "Customers will try several types of fine wine, and light snacks will be served to them. A professional sommelier will teach guests to evaluate an alcoholic drink according to various criteria.",
+    "imageURL": "https://e3.365dm.com/21/08/768x432/2372108240419757007_5488486.jpg?20210824092438",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "3h"
+    },
+    "category": "food",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Molecular cuisine master class for two",
+    "price": 60,
+    "description": "Customers will be introduced to cooking methods that are based on the laws of physics and chemistry.",
+    "imageURL": "https://t3.ftcdn.net/jpg/06/59/92/94/360_F_659929402_962uFA4Egd5e2ZkU4jbHoHkzmdtIfEpZ.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5h"
+    },
+    "category": "food",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Cocktail master class for two",
+    "price": 45,
+    "description": "In an individual lesson, a pro will tell clients about the basics of cocktail mixology and bartending tools. After that, the participants will be able to prepare two drinks from the establishment's menu.",
+    "imageURL": "https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWs1TVdaalpUQmpaaTFsWkRabUxUUmlNR0V0T0dKallTMDFPRFV4TmpNeE5qRXdZbUVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--9eb4972b1b9668141c2d042f1d0f9139f3e3703b/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMb0Eya0NXQUk9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--5c7b32c6a74ee88f2f4469ce3a4ae709d1994efe/23a61cd5-7e5a-43ef-bdb9-fa2540e8ee7f.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2h"
+    },
+    "category": "food",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Confectionery master class for two",
+    "price": 55,
+    "description": "Participants will be able to prepare marmalade, ice cream or tiramisu in an individual lesson.",
+    "imageURL": "https://static01.nyt.com/images/2014/01/23/dining/recipes-decadentchocolatecake/recipes-decadentchocolatecake-articleLarge.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5h"
+    },
+    "category": "food",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Kayaking Trip",
+    "price": 70,
+    "description": "Embark on a kayaking journey where you'll learn fundamental paddling techniques and navigate water currents, all while soaking in the beauty of scenic waterways. Our expert guides guarantee a safe and exhilarating experience, making it the perfect adventure for both novice and experienced kayakers.",
+    "imageURL": "https://of-crimea.ru/plug/kayaking-v-krymu.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5h"
+    },
+    "category": "sport",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Horse Trip",
+    "price": 70,
+    "description": "Participants can enjoy a fun lesson during which they will saddle horses and learn basic riding styles. Participants will enjoy an unusual activity and have a pleasant time together.",
+    "imageURL": "https://www.horseclass.com/wp-content/uploads/2021/11/stop-leaning-forward-while-riding.jpg",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5h"
+    },
+    "category": "sport",
+    "numberOfPeople": 2
+  },
+  {
+    "name": "Bachata",
+    "price": 70,
+    "description": "Mmerse yourself in the sultry dance style as expert instructors guide you through the passionate steps, ensuring an enchanting experience for all skill levels.",
+    "imageURL": "https://static.wixstatic.com/media/45751f_a19ce17255f54cd5960bc35260fafad4~mv2.webp",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany",
+      "duration": "2,5h"
+    },
+    "category": "sport",
+    "numberOfPeople": 2
   }
 ]
