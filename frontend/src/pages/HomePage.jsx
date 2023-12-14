@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../components/Navbar";
 const API_URL = "http://localhost:5005";
 
 const HomePage = () => {
@@ -11,7 +10,7 @@ const HomePage = () => {
   const [filteredArray, setFilteredArray] = useState([]);
 
   useEffect(() => {
-    // create a api call to the backend which is receiving all the gifts.json file from backend
+    // create an API call to the backend to receive all the gifts.json file from the backend
     const params = {};
 
     axios
@@ -19,35 +18,44 @@ const HomePage = () => {
       .then((response) => {
         setGifts(response.data);
         setFilteredArray(response.data);
-        console.log(response);
       })
       .catch((error) => console.error("Error fetching gifts", error));
   }, []);
 
   useEffect(() => {
-    if (selectedCategory && query) {
+    if (selectedCategory || query) {
       setFilteredArray(handleFiltering());
     } else {
       setFilteredArray(gifts);
     }
   }, [query, selectedCategory, gifts]);
-  console.log(
-    "THIS IS WHAT I AM SEARCHING FOR WITH CATEGORY  =>",
-    selectedCategory
-  );
-  console.log(
-    "THIS IS WHAT I AM SEARCHING FOR WITH NUMBER OF PEOPLE =>",
-    query
-  );
 
   const handleFiltering = () => {
     return gifts.filter((eachGift) => {
       return (
-        (selectedCategory === "" ||
-          eachGift.category.includes(selectedCategory)) &&
-        eachGift.numberOfPeople === query
+        (!selectedCategory || eachGift.category.includes(selectedCategory)) &&
+        (query === "" || eachGift.numberOfPeople === Number(query))
       );
     });
+  };
+
+  const handleAddToFavorites = (giftId) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const isCurrentlyFavorite = favorites.some((fav) => fav._id === giftId);
+
+    if (isCurrentlyFavorite) {
+      // If already in favorites, remove it
+      const updatedFavorites = favorites.filter((fav) => fav._id !== giftId);
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    } else {
+      // If not in favorites, add it
+      const selectedGift = gifts.find((gift) => gift._id === giftId);
+      const updatedFavorites = [...favorites, selectedGift];
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    }
+
+    // Force re-render by updating the state or any relevant state variable
+    setGifts([...gifts]);
   };
 
   return (
@@ -63,8 +71,8 @@ const HomePage = () => {
           >
             <option value="">All</option>
             <option value="art">art</option>
-            <option value="wellness">wellness </option>
-            <option value="adrenaline">adrenaline </option>
+            <option value="wellness">wellness</option>
+            <option value="adrenaline">adrenaline</option>
             <option value="indoor">indoor</option>
             <option value="outdoor">outdoor</option>
             <option value="food">food</option>
@@ -79,7 +87,7 @@ const HomePage = () => {
           <input
             type="number"
             value={query}
-            onChange={(e) => setQuery(Number(e.target.value))}
+            onChange={(e) => setQuery(e.target.value)}
           />
         </label>
 
@@ -94,13 +102,20 @@ const HomePage = () => {
                 />
                 <h3>{gift.name}</h3>
                 <p>{gift.description}</p>
-                <p>price: ${gift.price}</p>
+                <p>Price p.P. : {gift.price}€</p>
                 <p>
                   location: {gift.location.city}, {gift.location.country}
                 </p>
                 <p>category: {gift.category}</p>
-                <p>number of People: {gift.numberOfPeople}</p>
+                <p>Number of People: {gift.numberOfPeople}</p>
                 <Link to={`/gifts/${gift._id}`}>Details</Link>
+                <button onClick={() => handleAddToFavorites(gift._id)}>
+                  {JSON.parse(localStorage.getItem("favorites"))?.some(
+                    (fav) => fav._id === gift._id
+                  )
+                    ? "Remove from favorites"
+                    : "Add to favorites"}
+                </button>
               </div>
             </li>
           ))}

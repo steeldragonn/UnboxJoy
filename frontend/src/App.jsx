@@ -8,6 +8,7 @@ import SignupPage from "./pages/SignupPage";
 import HomePage from "./pages/HomePage";
 import "./App.css";
 import GiftDetailsPage from "./pages/GiftDetailsPage";
+import GiftFavorites from "./pages/GiftFavorites";
 import { AuthProviderWrapper } from "./context/auth.context";
 
 import Cart from "./pages/Cart";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/gifts" element={<HomePage />} />
           <Route path="/gifts/:giftId" element={<GiftDetailsPage />} />
+          <Route path="/favorites" element={<GiftFavorites />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </AuthProviderWrapper>
