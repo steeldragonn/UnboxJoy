@@ -1,86 +1,87 @@
 [
   {
-    "name": "Artistic Masterpiece",
-    "price": 150,
-    "description": "A heheheeh piece of art to adorn your space.",
-    "imageURL": "https://prom-date.com/cdn/shop/articles/King_Kevin1500.jpg?v=1665548251",
+    "name": "Paintball Vanguard Challenge",
+    "price": "30€ for person",
+    "description": "Friends are waiting for an exciting and dynamic game in the paintball club. Participants will hide in shelters and behind barricades and shoot each other with paintballs.",
+    "imageURL": "https://www.alma-park.de/wp-content/uploads/2016/02/Alma-Park-Paintball2.jpg",
     "location": {
-      "city": "Cityville",
-      "country": "Artland"
+      "city": "Berlin",
+      "country": "Germany"
     },
-    "category": "art",
+    "category": "adrenaline",
+    "numberOfPeople": 10
+  },
+
+  {
+    "name": "Drifting master class",
+    "price": "120€ per person",
+    "description": "A professional racer will show you how to stabilize the car when you lose control: during spinning, skidding and side sliding. After that, the participant will test his strength on the track. Get ready to be the eye of the drifting hurricane!",
+    "imageURL": "https://img.redbull.com/images/c_crop,w_4830,h_2415,x_0,y_302,f_auto,q_auto/c_scale,w_1200/redbullcom/2019/07/18/5e5e16d2-3d8c-4418-b78e-ba941403444d/piotr-wiecek",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany"
+    },
+    "category": "adrenaline",
     "numberOfPeople": 1
   },
   {
-    "name": "Adventure Getaway",
-    "price": 300,
-    "description": "An adrenaline-packed trip for thrill-seekers.",
-    "imageURL": "https://vanessa-stockard.myshopify.com/cdn/shop/files/IMG_1793.jpg?v=1691893313&width=3840",
+    "name": "The Fantasicable Zipline",
+    "price": "150€ per person",
+    "description": "The Fantasicable consists of a zip-line connecting between two mountains that is 1538 meters long and has a maximum height of 150 meters. The Fantasticable will emulate a flight sensation with a great landscape offering an unforgettable combination of sensations and feelings.",
+    "imageURL": "https://www.penaaventura.com.pt/images/atividades/fantasticable/1270/DSC_3806_40pct.jpg",
     "location": {
-      "city": "Thrillburg",
-      "country": "Adventureland"
+      "city": "Porto",
+      "country": "Portugal"
+    },
+    "category": "adrenaline",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Motocycle test drive",
+    "price": "80€ per person",
+    "description": "The client is waiting for a race on a special track with various obstacles. An experienced instructor will teach the basics of motorcycle management and provide the necessary equipment.",
+    "imageURL": "https://plus.unsplash.com/premium_photo-1661963676028-4df834387828?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW90b3N8ZW58MHx8MHx8fDA%3D",
+    "location": {
+      "city": "Berlin",
+      "country": "Germany"
+    },
+    "category": "adrenaline",
+    "numberOfPeople": 1
+  },
+  {
+    "name": "Double test-drive",
+    "price": "300€ per person",
+    "description": "The participant will ride two high-speed cars of their choice. It can be a Lamborghini Huracan or a Ferrari 458 Italia Spider. There will always be an experienced driver nearby.",
+    "imageURL": "https://i.ytimg.com/vi/OL76P1AsoOQ/maxresdefault.jpg",
+    "location": {
+      "city": "Paris",
+      "country": "France"
     },
     "category": "adrenaline",
     "numberOfPeople": 2
   },
   {
-    "name": "Soothing Spa Retreat",
-    "price": 200,
-    "description": "A wellness retreat to relax and rejuvenate.",
-    "imageURL": "https://s3-eu-central-1.amazonaws.com/sverediuk.com.ua/wp-content/uploads/2015/10/Melnitsa-na-beregu-reki.-Ukraina.-1880.jpg",
+    "name": "Fire line for two",
+    "price": "120€ per person",
+    "description": "Friends will go to the shooting range, where they will practice shooting with firearms. An experienced trainer will conduct a safety briefing, provide the necessary equipment and ammunition.",
+    "imageURL": "https://donum.ua/image/catalog/Master-clas/Kajan-Tir/new/kaj-new-7.jpg",
     "location": {
-      "city": "Relaxington",
-      "country": "Wellnessland"
-    },
-    "category": "wellness",
-    "numberOfPeople": 1
-  },
-  {
-    "name": "chilling on the coach",
-    "price": 10,
-    "description": "just sid down and think what did you acheived in this life",
-    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
-    "location": {
-      "city": "Relaxington",
-      "country": "Any"
-    },
-    "category": "wellness",
-    "numberOfPeople": 1
-  },
-  {
-    "name": "go for a walk, lazy bastard",
-    "price": 0,
-    "description": "video games will not save your fat ass from loneliness",
-    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
-    "location": {
-      "city": "Relaxington",
-      "country": "Any"
-    },
-    "category": "art",
-    "numberOfPeople": 1
-  },
-  {
-    "name": "checking gravity",
-    "price": 10000,
-    "description": "maybe you will transorm into a dragon, maybe you will just crash. who knows?",
-    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
-    "location": {
-      "city": "Somewhere in the sky",
-      "country": "Broland"
+      "city": "Berlin",
+      "country": "Germany"
     },
     "category": "adrenaline",
-    "numberOfPeople": 1
+    "numberOfPeople": 2
   },
   {
-    "name": "petting cats",
-    "price": 10000,
-    "description": "cats and money are girls best friends",
-    "imageURL": "https://arthive.net/res/media/img/oy800/work/454/348161@2x.webp",
+    "name": "Group Karting menace",
+    "price": "60€ per person",
+    "description": "Participation in a mass race on cards. Friends will be given the necessary equipment and taken to the track. After the race, you can pick up a printout with speed statistics.",
+    "imageURL": "https://vulcanpost.com/wp-content/uploads/2023/02/Evolt-karting-indoor-electric-kart-centre-malaysia-004.jpg",
     "location": {
-      "city": "in your heart",
-      "country": "Family"
+      "city": "Berlin",
+      "country": "Germany"
     },
-    "category": "wellness",
-    "numberOfPeople": 1
+    "category": "adrenaline",
+    "numberOfPeople": 3
   }
 ]
