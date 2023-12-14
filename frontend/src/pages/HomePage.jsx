@@ -8,6 +8,9 @@ const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [query, setQuery] = useState("");
   const [filteredArray, setFilteredArray] = useState([]);
+  ///LETS TRY PLEASE WORKKKKK
+  const [minPeople, setMinPeople] = useState("");
+  const [maxPeople, setMaxPeople] = useState("");
 
   useEffect(() => {
     // create an API call to the backend to receive all the gifts.json file from the backend
@@ -32,10 +35,22 @@ const HomePage = () => {
 
   const handleFiltering = () => {
     return gifts.filter((eachGift) => {
-      return (
-        (!selectedCategory || eachGift.category.includes(selectedCategory)) &&
-        (query === "" || eachGift.numberOfPeople === Number(query))
-      );
+      const numberOfPeople = eachGift.numberOfPeople;
+      const minNumberOfPeople = eachGift.minNumberOfPeople || 1;
+      const maxNumberOfPeople = eachGift.maxNumberOfPeople;
+
+      const isWithinNumberRange =
+        (minPeople === "" || numberOfPeople >= Number(minPeople)) &&
+        (maxPeople === "" || numberOfPeople <= Number(maxPeople)) &&
+        numberOfPeople >= minNumberOfPeople &&
+        (!maxNumberOfPeople || numberOfPeople <= maxNumberOfPeople);
+
+      const isMatchingCategory =
+        !selectedCategory || eachGift.category.includes(selectedCategory);
+
+      return isWithinNumberRange && isMatchingCategory;
+      // (!selectedCategory || eachGift.category.includes(selectedCategory)) &&
+      // isWithingRange
     });
   };
 
@@ -81,11 +96,20 @@ const HomePage = () => {
 
         <label>
           Number of People:
-          <input
-            type="number"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
+          <div>
+            <input
+              type="number"
+              placeholder="min"
+              value={minPeople}
+              onChange={(e) => setMinPeople(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="max"
+              value={maxPeople}
+              onChange={(e) => setMaxPeople(e.target.value)}
+            />
+          </div>
         </label>
 
         <ul className="giftList">
