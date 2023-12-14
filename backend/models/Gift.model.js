@@ -23,6 +23,9 @@ const giftSchema = new Schema({
     country: {
       type: String,
     },
+    duration: {
+      type: String,
+    },
   },
   //
 
