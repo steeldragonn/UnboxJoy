@@ -35,8 +35,8 @@ const Checkout = () => {
   return (
     <div>
       <h2>Checkout Page</h2>
-      <form>
-        <p>Contact</p>
+      <form className="checkout-page">
+        <p className="form-title">Contact</p>
         <label>
           Full name:
           <input
@@ -58,7 +58,7 @@ const Checkout = () => {
           />
         </label>
 
-        <p>Shipping Address:</p>
+        <p className="form-title">Shipping Address:</p>
         <label>
           Address:
           <input
@@ -91,7 +91,7 @@ const Checkout = () => {
           />
         </label>
 
-        <p>Payment Information</p>
+        <p className="form-title">Payment Information</p>
         <label>
           Card number:
           <input
