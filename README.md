@@ -4,7 +4,7 @@ UnboxJoy is an innovative E-commerce website built on the MERN stack, leveraging
 
 ## Table of Contents
 
-- [Project Name](#unboxjoy)
+[Project Name](#unboxjoy)
   - [Table of Contents](#table-of-contents)
   - [About](#about)
   - [Features](#features)
@@ -52,7 +52,7 @@ The following dependencies are installed:
 Step-by-step guide on how to install the project.
 
 ```bash
-# Example installation commands
+# Installation commands
 $ git clone https://github.com/steeldragonn/UnboxJoy.git
 $ cd UnboxJoy
 $ npm install
