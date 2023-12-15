@@ -9,6 +9,9 @@ const HomePage = () => {
   const [query, setQuery] = useState("");
   const [filteredArray, setFilteredArray] = useState([]);
 
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+
   useEffect(() => {
     // create an API call to the backend to receive all the gifts.json file from the backend
     const params = {};
@@ -23,18 +26,20 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedCategory || query) {
+    if (selectedCategory || query || (minPrice !== "" && maxPrice !== "")) {
       setFilteredArray(handleFiltering());
     } else {
       setFilteredArray(gifts);
     }
-  }, [query, selectedCategory, gifts]);
+  }, [query, selectedCategory, minPrice, maxPrice, gifts]);
 
   const handleFiltering = () => {
     return gifts.filter((eachGift) => {
       return (
         (!selectedCategory || eachGift.category.includes(selectedCategory)) &&
-        (query === "" || eachGift.numberOfPeople === Number(query))
+        (query === "" || eachGift.numberOfPeople === Number(query)) &&
+        (minPrice === "" || eachGift.price >= Number(minPrice)) &&
+        (maxPrice === "" || eachGift.price <= Number(maxPrice))
       );
     });
   };
@@ -77,6 +82,24 @@ const HomePage = () => {
             <option value="sport">sport</option>
             <option value="music">music</option>
           </select>
+        </label>
+
+        <label>
+          Min Price:
+          <input
+            type="number"
+            value={minPrice}
+            onChange={(e) => setMinPrice(e.target.value)}
+          />
+        </label>
+
+        <label>
+          Max Price:
+          <input
+            type="number"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+          />
         </label>
 
         <label>
