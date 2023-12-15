@@ -10,12 +10,12 @@ body {
 
 #root {
   /* max-width: 1280px; */
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
   background-color: #0f0e0e;
   color: aliceblue;
   display: flex;
+  justify-content: center;
 }
 
 .giftList {

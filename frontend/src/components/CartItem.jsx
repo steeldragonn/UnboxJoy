@@ -14,20 +14,24 @@ const CartItem = ({ item, handleRemoveFromCart }) => {
   };
 
   return (
-    <li key={item._id}>
-      <p>{item.name}</p>
-      <p>{item.price}€ per person </p>
+    <>
+      <div style={{ margin: "0", padding: "0" }}>
+        <li key={item._id}>
+          <p>{item.name}</p>
+          <p>{item.price}€ per person </p>
 
-      <div>
-        <button onClick={handleDecreaseQuantity}>-</button>
-        <p>Quantity: {quantity}</p>
-        <button onClick={handleIncreaseQuantity}>+</button>
+          <div>
+            <button onClick={handleDecreaseQuantity}>-</button>
+            <p>Quantity: {quantity}</p>
+            <button onClick={handleIncreaseQuantity}>+</button>
+          </div>
+
+          <button onClick={() => handleRemoveFromCart(item._id)}>
+            Remove from Cart
+          </button>
+        </li>
       </div>
-
-      <button onClick={() => handleRemoveFromCart(item._id)}>
-        Remove from Cart
-      </button>
-    </li>
+    </>
   );
 };
 
