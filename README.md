@@ -4,8 +4,6 @@ UnboxJoy is an innovative E-commerce website built on the MERN stack, leveraging
 
 ## Table of Contents
 
-[Project Name](#unboxjoy)
-  - [Table of Contents](#table-of-contents)
   - [About](#about)
   - [Features](#features)
   - [Getting Started](#getting-started)
