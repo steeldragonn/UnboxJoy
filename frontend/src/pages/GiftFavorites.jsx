@@ -17,11 +17,11 @@ const GiftFavorites = () => {
 
   return (
     <div>
-      <h2>Liked: {favorites.length}</h2>
+      <h2 className="heart">❤️ {favorites.length}</h2>
       {favorites.length > 0 ? (
-        <div className="favorites-item">
+        <div className="favorites-list">
           {favorites.map((favorite) => (
-            <div key={favorite._id}>
+            <div className="favorites-item" key={favorite._id}>
               <h3>{favorite.name}</h3>
               <p>{favorite.description}</p>
               <img

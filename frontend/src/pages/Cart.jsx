@@ -16,28 +16,6 @@ const Cart = () => {
     setCartItems(updatedCart);
   };
 
-  const handleIncreaseQuantity = (itemId) => {
-    const updatedCart = cartItems.map((item) =>
-      item._id === itemId
-        ? { ...item, quantity: (item.quantity || 1) + 1 }
-        : item
-    );
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(updatedCart);
-  };
-
-  const handleDecreaseQuantity = (itemId) => {
-    const updatedCart = cartItems.map((item) =>
-      item._id === itemId
-        ? { ...item, quantity: (item.quantity || 1) - 1 }
-        : item
-    );
-
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(updatedCart);
-  };
-
-  const totalItems = cartItems.length;
   const totalPrice = cartItems.reduce(
     (curr, item) => curr + item.price * (item.quantity || 1),
     0
@@ -46,9 +24,7 @@ const Cart = () => {
   return (
     <div>
       <h2>Gift Cart Page</h2>
-      <div>
-        <p>{totalItems}</p>
-      </div>
+      <div></div>
       {cartItems.length > 0 ? (
         <div>
           {cartItems.map((item) => (
@@ -56,14 +32,12 @@ const Cart = () => {
               key={item._id}
               item={item}
               handleRemoveFromCart={handleRemoveFromCart}
-              handleIncreaseQuantity={handleIncreaseQuantity}
-              handleDecreaseQuantity={handleDecreaseQuantity}
             />
           ))}
           <div>
             <p>Total: {totalPrice} €</p>
             <Link to="/checkout">
-              <button>Proceed to Checkout</button>
+              <button id="checkout-button">Proceed to Checkout</button>
             </Link>
           </div>
         </div>

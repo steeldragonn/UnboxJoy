@@ -9,7 +9,7 @@ const Payment = () => {
 
   return (
     <div>
-      <h1>Stripe Payment</h1>
+      <h1>How to ... </h1>
       <iframe
         width="600"
         height="355"

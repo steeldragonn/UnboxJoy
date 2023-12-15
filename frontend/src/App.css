@@ -1,7 +1,3 @@
-.GiftCard {
-  background-color: rgb(204, 255, 238);
-}
-
 body {
   background-color: #0f0e0e;
   display: flex;
@@ -41,4 +37,15 @@ body {
 
 img {
   width: 30vw;
+}
+
+.cartitem {
+  border: solid 1px white;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.cart-name {
+  font-weight: 600;
+  font-size: 25px;
 }

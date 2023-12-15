@@ -1,10 +1,10 @@
 html {
-  background-color: rgb(10, 11, 11);
+  background-color: #0f0e0e;
 }
 
 body {
   margin: 0;
-  background-color: rgb(16, 15, 15);
+  background-color: #0f0e0e;
   color: #111213;
   display: flex;
 }
@@ -133,4 +133,36 @@ h2 {
 .giftItem {
   border: solid white 1 px;
   padding: 30px;
+}
+
+.checkout-page {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: white solid 1px;
+  padding: 15px;
+}
+
+.form-title {
+  font-style: oblique;
+  font-weight: 700;
+  margin-top: 10px;
+  color: rgb(204, 255, 127);
+}
+
+.heart {
+  font-size: 15px;
+}
+
+.favorites-item {
+  border: white solid 1px;
+  font-size: 14px;
+}
+
+.favorites-list {
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
 }
