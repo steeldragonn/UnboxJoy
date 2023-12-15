@@ -99,11 +99,12 @@ const HomePage = () => {
                 />
                 <h3>{gift.name}</h3>
                 <p>{gift.description}</p>
-                <p>Price p.P. : {gift.price}€</p>
+                <p>Price per person : {gift.price}€</p>
                 <p>
-                  location: {gift.location.city}, {gift.location.country}
+                  Location: {gift.location.city}, {gift.location.country}
                 </p>
-                <p>category: {gift.category}</p>
+                <p>Category: {gift.category}</p>
+                <p>Duration: {gift.duration}</p>
                 <p>Number of People: {gift.numberOfPeople}</p>
                 <Link to={`/gifts/${gift._id}`}>Details</Link>
                 <button onClick={() => handleAddToFavorites(gift._id)}>
