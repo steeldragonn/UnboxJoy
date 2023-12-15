@@ -10,6 +10,7 @@ import "./App.css";
 import GiftDetailsPage from "./pages/GiftDetailsPage";
 import GiftFavorites from "./pages/GiftFavorites";
 import { AuthProviderWrapper } from "./context/auth.context";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Cart from "./pages/Cart";
 
