@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 const API_URL = "http://localhost:5005";
+import Carousel from "react-bootstrap/Carousel";
 
 const HomePage = () => {
   const [gifts, setGifts] = useState([]);
@@ -65,9 +66,9 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1>UnboxJoy</h1>
+      <h1 className="title">UnboxJoy</h1>
       <div>
-        <h2>Choose joy for loved ones</h2>
+        <h2 className="title">Choose joy for loved ones</h2>
         <label>
           Category:
           <select
@@ -112,36 +113,49 @@ const HomePage = () => {
         </label>
 
         <ul className="giftList">
-          {filteredArray.map((gift) => (
-            <li key={gift._id} className="giftItem">
-              <div>
-                <img
-                  src={gift.imageURL}
-                  alt={gift.name}
-                  style={{ maxWidth: "100px", maxHeight: "100px" }}
-                />
-                <h3>{gift.name}</h3>
-                <p>{gift.description}</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              marginTop: "2rem",
+            }}
+          >
+            {filteredArray.map((gift) => (
+              <li
+                style={{ margin: "20px" }}
+                key={gift._id}
+                className="giftItem"
+              >
+                <div className="giftsItem">
+                  <img
+                    src={gift.imageURL}
+                    alt={gift.name}
+                    style={{ maxWidth: "100px", maxHeight: "100px" }}
+                  />
+                  <h3>{gift.name}</h3>
+                  <p>{gift.description}</p>
 
-                <p>Price per person : {gift.price}€</p>
+                  <p>Price per person : {gift.price}€</p>
 
-                <p>
-                  Location: {gift.location.city}, {gift.location.country}
-                </p>
-                <p>Category: {gift.category}</p>
-                <p>Duration: {gift.duration}</p>
-                <p>Number of People: {gift.numberOfPeople}</p>
-                <Link to={`/gifts/${gift._id}`}>Details</Link>
-                <button onClick={() => handleAddToFavorites(gift._id)}>
-                  {JSON.parse(localStorage.getItem("favorites"))?.some(
-                    (fav) => fav._id === gift._id
-                  )
-                    ? "Remove from favorites"
-                    : "Add to favorites"}
-                </button>
-              </div>
-            </li>
-          ))}
+                  <p>
+                    Location: {gift.location.city}, {gift.location.country}
+                  </p>
+                  <p>Category: {gift.category}</p>
+                  <p>Duration: {gift.duration}</p>
+                  <p>Number of People: {gift.numberOfPeople}</p>
+                  <Link to={`/gifts/${gift._id}`}>Details</Link>
+                  <button onClick={() => handleAddToFavorites(gift._id)}>
+                    {JSON.parse(localStorage.getItem("favorites"))?.some(
+                      (fav) => fav._id === gift._id
+                    )
+                      ? "Remove from favorites"
+                      : "Add to favorites"}
+                  </button>
+                </div>
+              </li>
+            ))}
+          </div>
         </ul>
       </div>
     </div>

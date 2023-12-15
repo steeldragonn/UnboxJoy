@@ -2,25 +2,43 @@
   background-color: rgb(204, 255, 238);
 }
 
+body {
+  background-color: #0f0e0e;
+  display: flex;
+  flex-direction: column;
+}
+
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #0f0e0e;
+  color: aliceblue;
+  display: flex;
 }
 
 .giftList {
   list-style: none;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .giftItem {
-  border: 1px solid #0f0e0e;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid #f8f4f4;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 300px;
+  height: auto;
 }
 
 .giftItem img {
   max-width: 100px;
   max-height: 100px;
+}
+
+img {
+  width: 30vw;
 }
